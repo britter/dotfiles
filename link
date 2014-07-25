@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+link() {
+  from="$HOME/.dotfiles/$1"
+  to="$HOME/$2"
+  echo "New symlink $to -> $from"
+  rm -f $to
+  ln -s $from $to
+}
+
+# Link necessary files
+for file in .{bashrc,gitconfig,vimrc}; do
+  link $file $file
+done
+
+link ".bashrc" ".bash_profile"
+
