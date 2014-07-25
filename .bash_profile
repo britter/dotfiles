@@ -8,6 +8,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 ## PATH ##
 export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:$PATH
 
+export SVN_EDITOR=vim
+
 ## Bash look and feel
 export CLICOLOR=1
 
