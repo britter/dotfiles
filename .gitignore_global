@@ -1,0 +1,12 @@
+## IntelliJ stuff
+.idea
+*.iml
+
+## Eclipse stuff
+.project
+.classpath
+.settings
+
+## Mac OS stuff
+.DS_Store
+

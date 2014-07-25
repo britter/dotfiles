@@ -1,0 +1,6 @@
+[user]
+	email = beneritter@gmail.com
+	name = Benedikt Ritter
+[core]
+	excludesfile = ~/.dotfiles/.gitignore_global
+
