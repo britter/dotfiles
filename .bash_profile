@@ -45,3 +45,19 @@ redock() {
   export DOCKER_HOST="tcp://$DOCKER_IP:2375"
 }
 
+dock() {
+  redock
+
+  if [ "$1" == "elasticsearch" ]; then
+    docker stop elasticsearch &> /dev/null
+    docker rm elasticsearch &> /dev/null
+    docker run --detach \
+               --publish 9200:9200 \
+               --publish 9300:9300 \
+               --name elasticsearch \
+               dockerfile/elasticsearch
+    echo "Elasticsearch started. Listening to $DOCKER_IP:9200"
+  else
+    echo "Unknown service. Sample usage: 'dock elasticsearch'"
+  fi
+}
