@@ -6,6 +6,7 @@
 .project
 .classpath
 .settings
+bin
 
 ## Mac OS stuff
 .DS_Store
