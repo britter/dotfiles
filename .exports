@@ -1,0 +1,11 @@
+## SDKs ##
+export JAVA_6_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_7_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=$JAVA_8_HOME
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+## PATH ##
+export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:$PATH
+
+export SVN_EDITOR=vim

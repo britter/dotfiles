@@ -1,0 +1,17 @@
+## Open man page as PDF
+pman () { man -t "${1}" | open -f -a "Preview"; }
+
+## Bash completion
+complete -o default -o nospace -W "$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' < $HOME/.ssh/config)" scp sftp ssh
+
+## Show the location of a linked program
+ref() { readlink $(which "${1}"); }
+
+## Output MANIFEST for the given jar
+manifest() { unzip -q -c "${1}" META-INF/MANIFEST.MF; }
+
+## Get svn keywords
+gkw() { svn pg svn:keywords ${1}; }
+
+## Set svn keywords
+skw() { svn ps svn:keywords "Date Author Id Revision HeadURL" ${1}; }
