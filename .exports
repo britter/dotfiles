@@ -5,7 +5,10 @@ export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_HOME=$JAVA_8_HOME
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
+export GOPATH=~/.gopath
+
 ## PATH ##
 export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:$PATH
 
 export SVN_EDITOR=vim
+
