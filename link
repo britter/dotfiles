@@ -13,5 +13,11 @@ for file in .{bashrc,gitconfig,vimrc}; do
   link $file $file
 done
 
-link ".bashrc" ".bash_profile"
+mkdir -p $HOME/.atom
+FILES=.atom/*
+for atomFile in $FILES
+do
+  link $atomFile $atomFile
+done
 
+link ".bashrc" ".bash_profile"
