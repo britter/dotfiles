@@ -12,8 +12,13 @@ ref() { readlink $(which "${1}"); }
 
 ## Switching between different Java versions
 usejava() {
-  export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
-  echo "new JAVA_HOME: $JAVA_HOME"
+  if [ $# -eq 0 ]
+    then
+      echo "JAVA_HOME: $JAVA_HOME"
+  else
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+    echo "new JAVA_HOME: $JAVA_HOME"
+  fi
 }
 
 ## Output MANIFEST for the given jar
