@@ -19,3 +19,5 @@ gkw() { svn pg svn:keywords ${1}; }
 ## Set svn keywords
 skw() { svn ps svn:keywords "Date Author Id Revision HeadURL" ${1}; }
 
+## Start a simple HTTP Server
+alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
