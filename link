@@ -14,10 +14,9 @@ for file in .{bashrc,gitconfig,vimrc}; do
 done
 
 mkdir -p $HOME/.atom
-FILES=.atom/*
-for atomFile in $FILES
+for file in .atom/*
 do
-  link $atomFile $atomFile
+  link $file $file
 done
 
 link ".bashrc" ".bash_profile"
