@@ -10,6 +10,12 @@ alias rd="rm -rf"
 ## Show the location of a linked program
 ref() { readlink $(which "${1}"); }
 
+## Switching between different Java versions
+usejava() {
+  export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+  echo "new JAVA_HOME: $JAVA_HOME"
+}
+
 ## Output MANIFEST for the given jar
 manifest() { unzip -q -c "${1}" META-INF/MANIFEST.MF; }
 
