@@ -7,6 +7,9 @@ complete -o default -o nospace -W "$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]
 ## Remove directory
 alias rd="rm -rf"
 
+## Directory listings
+alias ll="ls -la"
+
 ## Show the location of a linked program
 ref() { readlink $(which "${1}"); }
 
