@@ -10,6 +10,15 @@ alias rd="rm -rf"
 ## Directory listings
 alias ll="ls -la"
 
+## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
+svn() { 
+  if [[ $@ == "reset" ]]; 
+    then 
+      command svn revert --recursive . && svn status | grep ^\? | cut -c9- | xargs  rm -r; 
+    else command svn "$@"; 
+  fi; 
+}
+
 ## Show the location of a linked program
 ref() { readlink $(which "${1}"); }
 
