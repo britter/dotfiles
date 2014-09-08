@@ -7,6 +7,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 export GOPATH=~/.gopath
 
+export MYSQL_HOME=/usr/local/Cellar/mysql55/5.5.30
+
 ## PATH ##
 export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:$PATH
 
