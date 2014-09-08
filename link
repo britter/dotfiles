@@ -9,7 +9,7 @@ link() {
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,vimrc}; do
+for file in .{bashrc,gitconfig,vimrc,profile}; do
   link $file $file
 done
 
