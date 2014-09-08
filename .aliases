@@ -10,6 +10,9 @@ alias rd="rm -rf"
 ## Directory listings
 alias ll="ls -la"
 
+## Gralde
+alias gdl="gradle"
+
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
 svn() { 
   if [[ $@ == "reset" ]]; 
