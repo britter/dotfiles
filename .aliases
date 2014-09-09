@@ -12,6 +12,7 @@ alias ll="ls -la"
 
 ## Gralde
 alias gdl="gradle"
+alias gdw="./gradlew"
 
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
 svn() { 
