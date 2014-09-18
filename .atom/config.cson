@@ -9,6 +9,7 @@
 'editor':
   'fontSize': 16
   'showInvisibles': true
+  'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'
