@@ -3,6 +3,8 @@
 	name = Benedikt Ritter
 [core]
 	excludesfile = ~/.dotfiles/.gitignore_global
+	autocrlf = input
+	editor = vim
 
 [push]
 	default = simple
