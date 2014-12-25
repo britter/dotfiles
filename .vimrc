@@ -15,3 +15,13 @@ set ignorecase
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+function RemoveTrailingWhitespace()
+    if !&binary
+        normal! mz
+        %s/\s\+$//ge
+        normal! 'z
+    endif
+endfunction
+
+" remove trailing spaces on save
+autocmd BufWritePre * :call RemoveTrailingWhitespace()
