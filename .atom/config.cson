@@ -1,4 +1,4 @@
-'global':
+'*':
   'exception-reporting':
     'userId': 'cb956b10-11d8-a504-3f83-3a6ef31a263a'
   'release-notes':
@@ -9,6 +9,7 @@
     'userId': '99095a4be24cf0f1229970235870b3b1bad578f7'
   'editor':
     'showInvisibles': true
+    'invisibles': {}
   'core':
     'ignoredNames': [
       '.git'
