@@ -4,6 +4,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# redo previous command with sudo
+alias fuck='sudo $(history -p \!\!)'
+
 ## Open man page as PDF
 pman () { man -t "${1}" | open -f -a "Preview"; }
 
