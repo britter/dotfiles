@@ -1,3 +1,9 @@
+# Easier navigation: .., ..., ...., .....
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 ## Open man page as PDF
 pman () { man -t "${1}" | open -f -a "Preview"; }
 
