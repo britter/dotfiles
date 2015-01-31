@@ -62,6 +62,10 @@ usejava() {
 ## Output MANIFEST for the given jar
 manifest() { unzip -q -c "${1}" META-INF/MANIFEST.MF; }
 
+## Output LINCENSE file for the given jar
+license() { unzip -q -c "${1}" META-INF/LICENSE.txt; }
+
+
 ## Get svn keywords
 gkw() { svn pg svn:keywords ${1}; }
 
