@@ -14,4 +14,3 @@ for file in .{bashrc,gitconfig,vimrc,profile}; do
 done
 
 link ".bashrc" ".bash_profile"
-
