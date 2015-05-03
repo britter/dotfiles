@@ -8,3 +8,11 @@
 
 [push]
 	default = simple
+
+[alias]
+  # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    cleanup = git branch --merged | grep -v '*' | xargs git branch -d
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
