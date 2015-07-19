@@ -15,5 +15,6 @@
     branches = branch -a
     remotes = remote -v
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
 [credential]
 	helper = osxkeychain
