@@ -19,21 +19,26 @@ alias rd="rm -rf"
 ## Directory listings
 alias ll="ls -la"
 
-## Gralde
+## Gradle
 alias gdl="gradle"
 
 gdw() {
-    _GDW_DIR=$(pwd)
+  _GDW_DIR=$(pwd)
+  while [ "$_GDW_DIR" != "/" ]; do
+    if [ -f "$_GDW_DIR/gradlew" ]; then
+      _GDW_EXEC="$_GDW_DIR/gradlew --stacktrace"
 
-    while [ "$_GDW_DIR" != "/" ]; do
-        _GDW_PATH="$_GDW_DIR/gradlew"
-        if [ -f $_GDW_PATH ]; then
-            $_GDW_PATH "$@"
-            break;
-        fi
+      if [ -f $_GDW_DIR/init.gradle ]; then
+        _GDW_EXEC="$_GDW_EXEC -I $_GDW_DIR/init.gradle"
+      fi
 
-        _GDW_DIR=$(dirname $_GDW_DIR)
-    done
+      $_GDW_EXEC "$@"
+      break;
+    fi
+
+    _GDW_DIR=$(dirname $_GDW_DIR)
+    echo $_GDW_DIR
+  done
 }
 
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
