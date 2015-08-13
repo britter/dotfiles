@@ -21,7 +21,7 @@
 	st = status
 	ci = commit
 	cia = commit --amend
-	rbi = rebase -i
+	rbi = rebase -i master
 	rbm = rebase master
 [credential "https://git-wip-us.apache.org/"]
 	helper = osxkeychain
