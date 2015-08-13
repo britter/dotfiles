@@ -28,5 +28,3 @@
 [credential "https://oevcloud.org/"]
 	helper = osxkeychain
 
-[branch "master"]
-	mergeoptions = --no-ff
