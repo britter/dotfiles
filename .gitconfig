@@ -23,6 +23,7 @@
 	cia = commit --amend
 	rbi = rebase -i master
 	rbm = rebase master
+	rbc = rebase --continue
 [credential "https://git-wip-us.apache.org/"]
 	helper = osxkeychain
 [credential "https://oevcloud.org/"]
