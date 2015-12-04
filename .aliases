@@ -22,6 +22,8 @@ alias ll="ls -la"
 ## Gradle
 alias gdl="gradle"
 
+# traverse the directory hierarchy up until finds a gradlew file and executes
+# it with arguments supplied by user
 gdw() {
   _GDW_DIR=$(pwd)
   while [ "$_GDW_DIR" != "/" ]; do
@@ -33,6 +35,7 @@ gdw() {
       fi
 
       $_GDW_EXEC "$@"
+      return $?
       break;
     fi
 
