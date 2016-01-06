@@ -15,3 +15,6 @@ set ignorecase
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" Syntax highlighting for gradle files
+au BufNewFile,BufRead *.gradle setf groovy
+
