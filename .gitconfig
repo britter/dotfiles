@@ -1,35 +1,35 @@
 [user]
-	email = beneritter@gmail.com
-	name = Benedikt Ritter
+  email = beneritter@gmail.com
+  name = Benedikt Ritter
 [core]
-	excludesfile = ~/.dotfiles/.gitignore_global
-	autocrlf = input
-	editor = vim
+  excludesfile = ~/.dotfiles/.gitignore_global
+  autocrlf = input
+  editor = vim
 
 [push]
-	default = simple
+  default = simple
 
 [alias]
   # Show verbose output about tags, branches or remotes
-    tags = tag -l
-    branches = branch -a
-    remotes = remote -v
-	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
-	co = checkout
-	cm = checkout master
-	st = status
-	ci = commit
-	cia = commit --amend
-	rbi = rebase -i master
-	rbm = rebase master
-	rbc = rebase --continue
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
+  co = checkout
+  cm = checkout master
+  st = status
+  ci = commit
+  cia = commit --amend
+  rbi = rebase -i master
+  rbm = rebase master
+  rbc = rebase --continue
 [credential "https://git-wip-us.apache.org/"]
-	helper = osxkeychain
+  helper = osxkeychain
 [credential "https://oevcloud.org/"]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
