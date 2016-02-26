@@ -16,7 +16,7 @@
   remotes = remote -v
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
-  sync = "!f() { git checkout master && git fetch upstream && git merge upstream/master && git push origin master && git cleanup;  }; f"
+  sync = "!f() { git checkout master && git fetch upstream && git merge upstream/master && git push origin master && git cleanup && git fetch -p;  }; f"
   co = checkout
   cm = checkout master
   st = status
