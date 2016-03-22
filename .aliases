@@ -44,6 +44,16 @@ gdw() {
   done
 }
 
+## initialize maven wrapper
+mvnwinit() {
+  if [ $# -eq 0 ]
+  then
+    mvn -N io.takari:maven:wrapper
+  else
+    mvn -N io.takari:maven:wrapper -Dmaven=$1
+  fi
+}
+
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
 svn() {
   if [[ $@ == "reset" ]];
