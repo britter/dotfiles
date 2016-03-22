@@ -10,7 +10,7 @@
   default = simple
 
 [alias]
-  # Show verbose output about tags, branches or remotes
+  this = "!f() { git init && git add --all && git commit -m 'Initial commit'; }; f"
   tags = tag -l
   branches = branch -a
   remotes = remote -v
