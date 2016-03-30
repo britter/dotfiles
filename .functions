@@ -98,6 +98,7 @@ gitignore() {
   done
 }
 
+# Create a README.md file for the current directory
 readme() {
   project_name=$(basename $PWD)
   cat > README.md << EOF
@@ -116,11 +117,13 @@ This code is open source software licensed under the [Apache 2.0 License](https:
 EOF
 }
 
+## Push current git project to github
 githubinit() {
   hub create $(basename $PWD)
   git push -u origin master
 }
 
+## Initialize a new project
 projectinit () {
   alv2
   gitignore
