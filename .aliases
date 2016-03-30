@@ -10,9 +10,6 @@ alias fuck='sudo $(history -p \!\!)'
 ## Open man page as PDF
 pman () { man -t "${1}" | open -f -a "Preview"; }
 
-## Bash completion
-complete -o default -o nospace -W "$(/usr/bin/env ruby -ne 'puts $_.split(/[,\s]+/)[1..-1].reject{|host| host.match(/\*|\?/)} if $_.match(/^\s*Host\s+/);' < $HOME/.ssh/config)" scp sftp ssh
-
 ## Remove directory
 alias rd="rm -rf"
 
