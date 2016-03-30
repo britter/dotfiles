@@ -9,8 +9,6 @@ link() {
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,vimrc,profile}; do
+for file in .{bash_profile,bashrc,gitconfig,vimrc,profile}; do
   link $file $file
 done
-
-link ".bashrc" ".bash_profile"
