@@ -116,9 +116,15 @@ This code is open source software licensed under the [Apache 2.0 License](https:
 EOF
 }
 
+githubinit() {
+  hub create $(basename $PWD)
+  git push -u origin master
+}
+
 projectinit () {
   alv2
   gitignore
   readme
   git this
+  githubinit
 }
