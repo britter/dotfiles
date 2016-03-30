@@ -33,6 +33,18 @@ mvnwinit() {
   fi
 }
 
+mvnw() {
+  if [[ $1 == "init" ]]
+  then
+    mvnwinit $2
+  elif [[ -f mvnw ]]
+  then
+    ./mvnw "$@"
+    return $?
+  else echo "No maven wrapper available for this project! Run mvnw init first."
+  fi
+}
+
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
 svn() {
   if [[ $@ == "reset" ]];
