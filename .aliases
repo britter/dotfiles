@@ -18,3 +18,5 @@ alias gdl="gradle"
 
 ## Start a simple HTTP Server
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
+
+alias alv2="cp ~/.dotfiles/licenses/ALv2.txt ./LICENSE.txt"
