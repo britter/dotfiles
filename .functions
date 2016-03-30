@@ -67,3 +67,21 @@ gkw() { svn pg svn:keywords ${1}; }
 
 ## Set svn keywords
 skw() { svn ps svn:keywords "Date Author Id Revision HeadURL" ${1}; }
+
+## auto detect git ignore
+## requires bash 4!
+gitignore() {
+  declare -A files
+  files["pom.xml"]=maven
+  files["build.gradle"]=gradle
+  files["build.sbt"]=sbt
+
+  for file in "${!files[@]}"
+  do
+    if [[ -f $file ]]
+    then
+      echo "Adding $file files to .gitignore."
+      gibo ${files[$file]} >> .gitignore
+    fi
+  done
+}
