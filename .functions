@@ -33,6 +33,18 @@ mvnwinit() {
   fi
 }
 
+mvnw() {
+  if [[ $1 == "init" ]]
+  then
+    mvnwinit $2
+  elif [[ -f mvnw ]]
+  then
+    ./mvnw "$@"
+    return $?
+  else echo "No maven wrapper available for this project! Run mvnw init first."
+  fi
+}
+
 ## Resets SVN working copy, reverting all changed files and removing all unversioned files. Usage: svn reset
 svn() {
   if [[ $@ == "reset" ]];
@@ -67,3 +79,55 @@ gkw() { svn pg svn:keywords ${1}; }
 
 ## Set svn keywords
 skw() { svn ps svn:keywords "Date Author Id Revision HeadURL" ${1}; }
+
+## auto detect git ignore
+## requires bash 4!
+gitignore() {
+  declare -A files
+  files["pom.xml"]=maven
+  files["build.gradle"]=gradle
+  files["build.sbt"]=sbt
+
+  for file in "${!files[@]}"
+  do
+    if [[ -f $file ]]
+    then
+      echo "Adding $file files to .gitignore."
+      gibo ${files[$file]} >> .gitignore
+    fi
+  done
+}
+
+# Create a README.md file for the current directory
+readme() {
+  project_name=$(basename $PWD)
+  cat > README.md << EOF
+# $project_name
+
+Welcome to $project_name!
+
+## Contribution policy
+
+Contributions via GitHub pull requests are gladly accepted from their original author. Along with any pull requests, please state that the contribution is your original work and that you license the work to the project under the project's open source license. Whether or not you state this explicitly, by submitting any copyrighted material via pull request, email, or other means you agree to license the material under the project's open source license and warrant that you have the legal authority to do so.
+
+## License
+
+This code is open source software licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).
+
+EOF
+}
+
+## Push current git project to github
+githubinit() {
+  hub create $(basename $PWD)
+  git push -u origin master
+}
+
+## Initialize a new project
+projectinit () {
+  alv2
+  gitignore
+  readme
+  git this
+  githubinit
+}
