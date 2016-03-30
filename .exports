@@ -18,12 +18,3 @@ export DOCKER_TLS_VERIFY=1
 export DOCKER_CERT_PATH=$HOME/.docker/machine/machines/default
 export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_MACHINE_NAME=default
-
-## Signing ##
-## Activate gpg agent ##
-eval $(gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
-export GPG_TTY=$(tty)
-export GPG_AGENT_INFO
-
-export NVM_DIR="/Users/bene/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
