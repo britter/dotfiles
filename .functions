@@ -94,6 +94,7 @@ gitignore() {
   files["pom.xml"]=maven
   files["build.gradle"]=gradle
   files["build.sbt"]=sbt
+  files["Cargo.toml"]=rust
 
   for file in "${!files[@]}"
   do
