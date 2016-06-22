@@ -89,6 +89,8 @@ skw() { svn ps svn:keywords "Date Author Id Revision HeadURL" ${1}; }
 
 ## auto detect git ignore
 ## requires bash 4!
+## Note that bash 4 has to be defined as login shell. On Mac OS this has to be
+## done via System preferences > Users > right click our profil picture > extended options
 gitignore() {
   declare -A files
   files["pom.xml"]=maven
