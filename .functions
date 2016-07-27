@@ -64,7 +64,12 @@ usejava() {
     echo "JAVA_HOME: $JAVA_HOME"
   else
     OLD_JAVA_HOME=$JAVA_HOME
-    NEW_JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+    if [[ $1 < 9 ]]
+    then
+      NEW_JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+    else
+      NEW_JAVA_HOME=`/usr/libexec/java_home -v $1`
+    fi
     if [[ $? == 0 ]]
     then
       echo "Setting JAVA_HOME to: $NEW_JAVA_HOME"
