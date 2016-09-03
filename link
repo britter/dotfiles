@@ -4,11 +4,21 @@ link() {
   from="$HOME/.dotfiles/$1"
   to="$HOME/$2"
   echo "New symlink $to -> $from"
-  rm -f $to
+  if [[ -d $to ]]; then
+    rm -rf $to
+  else
+    rm -f $to
+  fi
   ln -s $from $to
 }
 
 # Link necessary files
 for file in .{bash_profile,bashrc,gitconfig,vimrc}; do
   link $file $file
+done
+
+# Link files in .config dir
+mkdir -p $HOME/.config
+for folder in .config/*; do
+  link $folder $folder
 done
