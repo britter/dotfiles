@@ -9,7 +9,7 @@ set -x GOPATH ~/.gopath
 
 set PATH /usr/local/bin $JAVA_HOME/bin ~/bin $PATH
 
-set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize 128m"
+set -xl MAVEN_OPTS -Xmx512m -XX:MaxPermSize 128m
 
 set -x SVN_EDITOR vim
 
