@@ -17,3 +17,8 @@ set -x DOCKER_TLS_VERIFY 1
 set -x DOCKER_CERT_PATH $HOME/.docker/machine/machines/default
 set -x DOCKER_HOST tcp://192.168.99.100:2376
 set -x DOCKER_MACHINE_NAME default
+
+## gpg-agent
+eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
+set -x GPG_TTY (tty)
+set -x GPG_AGENT_INFO
