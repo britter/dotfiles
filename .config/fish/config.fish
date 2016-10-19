@@ -13,11 +13,6 @@ set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
 set -x SVN_EDITOR vim
 
-set -x DOCKER_TLS_VERIFY 1
-set -x DOCKER_CERT_PATH $HOME/.docker/machine/machines/default
-set -x DOCKER_HOST tcp://192.168.99.100:2376
-set -x DOCKER_MACHINE_NAME default
-
 ## gpg-agent
 eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
 set -x GPG_TTY (tty)
