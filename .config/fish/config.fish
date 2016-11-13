@@ -7,7 +7,7 @@ set -x JAVA_HOME $JAVA_8_HOME
 
 set -x GOPATH ~/.gopath
 
-set PATH /usr/local/bin $JAVA_HOME/bin ~/bin $PATH
+set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin ~/bin $PATH
 
 set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
