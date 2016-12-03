@@ -1,5 +1,4 @@
 ## SDKs ##
-set -x JAVA_6_HOME (/usr/libexec/java_home -v 1.6)
 set -x JAVA_7_HOME (/usr/libexec/java_home -v 1.7)
 set -x JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
 set -x JAVA_9_HOME (/usr/libexec/java_home -v 9)
