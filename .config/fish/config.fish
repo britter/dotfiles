@@ -17,8 +17,3 @@ rbenv rehash >/dev/null ^&1
 set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
 set -x SVN_EDITOR vim
-
-## gpg-agent
-eval (gpg-agent --daemon | sed -e "s/\(.*\)=\(.*\); export/set -x \1 \2/")
-set -x GPG_TTY (tty)
-set -x GPG_AGENT_INFO
