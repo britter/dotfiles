@@ -6,7 +6,7 @@ set -x JAVA_HOME $JAVA_8_HOME
 
 set -x GOPATH ~/.gopath
 
-set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin ~/bin $PATH
+set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $PATH
 
 ## rbenv support
 set PATH $HOME/.rbenv/bin $PATH
