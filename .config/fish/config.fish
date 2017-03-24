@@ -8,10 +8,13 @@ set -x GOPATH ~/.gopath
 
 set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $PATH
 
-## rbenv support
+## rbenv
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
+
+## nvm
+set -x NVM_HOME $HOME/.nvm
 
 set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
