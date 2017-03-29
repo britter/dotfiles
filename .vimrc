@@ -1,3 +1,18 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+""" Vundle configuration
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins
+Plugin 'derekwyatt/vim-scala'
+Plugin 'idris-hackers/idris-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
 syntax on
 
 set number
@@ -19,15 +34,5 @@ match OverLength /\%81v.\+/
 au BufNewFile,BufRead *.gradle setf groovy
 au BufNewFile,BufRead *.sbt setf scala
 
-""" Vundle configuration
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Plugins
-Plugin 'derekwyatt/vim-scala'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+filetype on
 filetype plugin indent on    " required
-
