@@ -1,0 +1,4 @@
+alias c = compile
+alias t = test
+alias r = reload
+
