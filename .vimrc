@@ -1,19 +1,8 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-""" Vundle configuration
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Plugins
-Plugin 'derekwyatt/vim-scala'
-Plugin 'idris-hackers/idris-vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+execute pathogen#infect()
 
 syntax on
+filetype on
+filetype plugin indent on
 
 set number
 set expandtab
@@ -25,6 +14,8 @@ set hlsearch
 set incsearch
 set ignorecase
 
+let maplocalleader=","
+
 " use different background color after 80 chars
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
@@ -34,5 +25,3 @@ match OverLength /\%81v.\+/
 au BufNewFile,BufRead *.gradle setf groovy
 au BufNewFile,BufRead *.sbt setf scala
 
-filetype on
-filetype plugin indent on    " required
