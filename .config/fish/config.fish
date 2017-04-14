@@ -1,3 +1,8 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 ## SDKs ##
 set -x JAVA_7_HOME (/usr/libexec/java_home -v 1.7)
 set -x JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
