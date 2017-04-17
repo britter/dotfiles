@@ -24,3 +24,6 @@ set -x NVM_HOME $HOME/.nvm
 set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
 set -x SVN_EDITOR vim
+
+# gpg signing
+set -x GPG_TTY (tty)
