@@ -1,0 +1,7 @@
+[user]
+  email = britter@apache.org
+  name = Benedikt Ritter
+  signingkey = 9DAADC1C9FCC82D0
+
+[commit]
+  gpgsign = true

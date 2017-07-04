@@ -1,6 +1,13 @@
 [user]
   email = beneritter@gmail.com
   name = Benedikt Ritter
+
+[includeif "gitdir:~/workspace/codecentric/"]
+  path = ~/.dotfiles/.gitconfig-work
+
+[includeif "gitdir:~/workspace/apache/"]
+  path = ~/.dotfiles/.gitconfig-apache
+
 [core]
   excludesfile = ~/.dotfiles/.gitignore_global
   autocrlf = input
