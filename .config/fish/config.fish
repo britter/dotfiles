@@ -11,11 +11,9 @@ set -x JAVA_HOME $JAVA_8_HOME
 
 set -x GOPATH ~/.gopath
 
-set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $PATH
+set PATH /usr/local/bin $JAVA_HOME/bin $HOME/.cargo/bin $PATH
 
 ## rbenv
-set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
 ## nvm
