@@ -8,7 +8,7 @@ export GROOVY_HOME=/usr/local/Cellar/groovy/2.3.7/libexec
 export GOPATH=~/.gopath
 
 ## PATH ##
-export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:~/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:~/bin:$HOME/.cargo/bin:$PATH
 
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 
