@@ -1,3 +1,3 @@
 function dotfiles
-	atom ~/.dotfiles
+  code ~/.dotfiles
 end
