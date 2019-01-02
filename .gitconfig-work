@@ -1,3 +1,7 @@
 [user]
-  email = benedikt.ritter@codecentric.de
+  email = benedikt@gradle.com
   name = Benedikt Ritter
+  signingkey = 5AEF67FC9BD7F4CA
+
+[commit]
+  gpgsign = true
