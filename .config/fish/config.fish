@@ -7,7 +7,9 @@ alias .....="cd ../../../.."
 set -x JAVA_7_HOME (/usr/libexec/java_home -v 1.7)
 set -x JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
 set -x JAVA_9_HOME (/usr/libexec/java_home -v 9)
-set -x JAVA_HOME $JAVA_8_HOME
+set -x JAVA_10_HOME (/usr/libexec/java_home -v 10)
+set -x JAVA_11_HOME (/usr/libexec/java_home -v 11)
+set -x JAVA_HOME $JAVA_11_HOME
 
 set -x GOPATH ~/.gopath
 

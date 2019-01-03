@@ -24,4 +24,4 @@ function use_java --description "Switch between Java versions"
   end
 end
 
-complete -c use_java -a "6 7 8 9"
+complete -c use_java -a "6 7 8 9 10 11"
