@@ -11,3 +11,5 @@ bin
 ## Mac OS stuff
 .DS_Store
 
+## direnv
+.envrc

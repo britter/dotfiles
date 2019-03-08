@@ -3,6 +3,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+## Initialize direnv
+eval (direnv hook fish)
+
 ## SDKs ##
 set -x JAVA_6_HOME (/usr/libexec/java_home -v 1.6)
 set -x JDK6 $JAVA_6_HOME
@@ -16,8 +19,7 @@ set -x JAVA_10_HOME (/usr/libexec/java_home -v 10)
 set -x JDK10 $JAVA_10_HOME
 set -x JAVA_11_HOME (/usr/libexec/java_home -v 11)
 set -x JDK11 $JAVA_11_HOME
-set -x JAVA_HOME $JAVA_11_HOME
-
+set -q JAVA_HOME; or set -x $JAVA_11_HOME
 set -x GOPATH ~/.gopath
 
 set PATH /usr/local/bin $JAVA_HOME/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
