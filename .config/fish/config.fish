@@ -1,10 +1,10 @@
+## Initialize direnv
+eval (direnv hook fish)
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-## Initialize direnv
-eval (direnv hook fish)
 
 ## SDKs ##
 set -x JAVA_6_HOME (/usr/libexec/java_home -v 1.6)
@@ -30,8 +30,6 @@ rbenv rehash >/dev/null ^&1
 
 ## nvm
 set -x NVM_HOME $HOME/.nvm
-
-set -x MAVEN_OPTS "-Xmx512m -XX:MaxPermSize=128m"
 
 set -x SVN_EDITOR vim
 

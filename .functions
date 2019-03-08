@@ -23,6 +23,19 @@ gdw() {
   done
 }
 
+## mvn shim to load settings
+mvn() {
+  echo mvn
+  if [ ! -z "$MAVEN_SETTINGS" ]
+  then
+    echo set
+    command mvn -s $MAVEN_SETTINGS "$@"
+  else
+    echo "not set"
+    command mvn "$@"
+  fi
+}
+
 ## initialize maven wrapper
 mvnwinit() {
   if [ $# -eq 0 ]
