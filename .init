@@ -17,6 +17,3 @@ export NVM_DIR="/Users/bene/.nvm"
 
 ## Initialize rbenv ##
 eval "$(rbenv init -)"
-
-## Initialize dirvenv
-eval "$(direnv hook bash)"

@@ -1,25 +1,24 @@
-## Initialize direnv
-eval (direnv hook fish)
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 ## SDKs ##
-set -x JAVA_6_HOME (/usr/libexec/java_home -v 1.6)
+[ -s "/Users/bene/.jabba/jabba.fish" ]; and source "/Users/bene/.jabba/jabba.fish"
+set -x JAVA_6_HOME (jabba which 1.6.65 --home)
 set -x JDK6 $JAVA_6_HOME
-set -x JAVA_7_HOME (/usr/libexec/java_home -v 1.7)
+set -x JAVA_7_HOME (jabba which zulu@1.7.222 --home)
 set -x JDK7 $JAVA_7_HOME
-set -x JAVA_8_HOME (/usr/libexec/java_home -v 1.8)
+set -x JAVA_8_HOME (jabba which zulu@1.8.212 --home)
 set -x JDK8 $JAVA_8_HOME
-set -x JAVA_9_HOME (/usr/libexec/java_home -v 9)
+set -x JAVA_9_HOME (jabba which openjdk@1.9.0-4 --home)
 set -x JDK9 $JAVA_9_HOME
-set -x JAVA_10_HOME (/usr/libexec/java_home -v 10)
+set -x JAVA_10_HOME (jabba which openjdk@1.10.0-2 --home)
 set -x JDK10 $JAVA_10_HOME
-set -x JAVA_11_HOME (/usr/libexec/java_home -v 11)
+set -x JAVA_11_HOME (jabba which openjdk@1.11.0-2 --home)
 set -x JDK11 $JAVA_11_HOME
-set -q JAVA_HOME; or set -x JAVA_HOME $JAVA_11_HOME
+set -x JAVA_12_HOME (jabba which openjdk@1.12.0-1 --home)
+set -x JDK12 $JAVA_12_HOME
 
 set -x GOPATH ~/.gopath
 

@@ -70,29 +70,6 @@ svn() {
 ## Show the location of a linked program
 ref() { readlink $(which "${1}"); }
 
-## Switching between different Java versions
-usejava() {
-  if [ $# -eq 0 ]
-  then
-    echo "JAVA_HOME: $JAVA_HOME"
-  else
-    OLD_JAVA_HOME=$JAVA_HOME
-    if [[ $1 < 9 ]]
-    then
-      NEW_JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
-    else
-      NEW_JAVA_HOME=`/usr/libexec/java_home -v $1`
-    fi
-    if [[ $? == 0 ]]
-    then
-      echo "Setting JAVA_HOME to: $NEW_JAVA_HOME"
-      export JAVA_HOME=$NEW_JAVA_HOME
-      export PATH=${PATH//$OLD_JAVA_HOME/$NEW_JAVA_HOME}
-    else echo "Java 1.$1 is not available! JAVA_HOME: $JAVA_HOME"
-    fi
-  fi
-}
-
 ## Output MANIFEST for the given jar
 manifest() { unzip -q -c "${1}" META-INF/MANIFEST.MF; }
 
