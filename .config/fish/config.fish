@@ -15,7 +15,7 @@ set -x JAVA_9_HOME (jabba which openjdk@1.9.0-4 --home)
 set -x JDK9 $JAVA_9_HOME
 set -x JAVA_10_HOME (jabba which openjdk@1.10.0-2 --home)
 set -x JDK10 $JAVA_10_HOME
-set -x JAVA_11_HOME (jabba which openjdk@1.11.0-2 --home)
+set -x JAVA_11_HOME (jabba which openjdk@1.11.0-4 --home)
 set -x JDK11 $JAVA_11_HOME
 set -x JAVA_12_HOME (jabba which openjdk@1.12.0-1 --home)
 set -x JDK12 $JAVA_12_HOME
