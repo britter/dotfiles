@@ -1,6 +1,7 @@
 ## IntelliJ stuff
 .idea
 *.iml
+out/
 
 ## Eclipse stuff
 .project
