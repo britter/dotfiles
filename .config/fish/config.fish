@@ -24,12 +24,6 @@ set -x GOPATH ~/.gopath
 
 set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
-## rbenv
-rbenv rehash >/dev/null ^&1
-
-## nvm
-set -x NVM_HOME $HOME/.nvm
-
 set -x SVN_EDITOR vim
 
 # gpg signing
