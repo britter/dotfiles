@@ -4,8 +4,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 ## SDKs ##
-set -x JDK8 "~/.sdkman/candidates/java/8.0.232.hs-adpt"
-set -x JDK11 "~/.sdkman/candidates/java/11.0.5.hs-adpt"
+set -x JDK8 "$SDKMAN_CANDIDATES_DIR/java/8.0.232.hs-adpt"
+set -x JDK11 "$SDKMAN_CANDIDATES_DIR/java/11.0.5.hs-adpt"
 set -x JAVA_HOME $JDK11
 
 set -x GOPATH ~/.gopath
