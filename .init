@@ -9,7 +9,5 @@ fi
 ## Initialize sdkman
 [[ -s "/Users/bene/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bene/.sdkman/bin/sdkman-init.sh"
 
-## Initialize gpg agent ##
-eval $(gpg-agent --daemon --no-grab --write-env-file $HOME/.gpg-agent-info)
+## Set gpg tty ##
 export GPG_TTY=$(tty)
-export GPG_AGENT_INFO
