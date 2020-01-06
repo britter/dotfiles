@@ -40,8 +40,6 @@
   rbc = rebase --continue
 [credential "https://git-wip-us.apache.org/"]
   helper = osxkeychain
-[credential "https://oevcloud.org/"]
-  helper = osxkeychain
 
 [filter "lfs"]
   required = true
