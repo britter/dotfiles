@@ -4,7 +4,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 set -x LANG en_US.utf-8
-set -x LC_ALL C
 
 ## SDKs ##
 set -x JDK8 "$SDKMAN_CANDIDATES_DIR/java/8.0.232.hs-adpt"
