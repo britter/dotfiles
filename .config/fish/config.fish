@@ -6,6 +6,7 @@ alias .....="cd ../../../.."
 set -x LANG en_US.utf-8
 
 ## SDKs ##
+set -x JDK6 "$SDKMAN_CANDIDATES_DIR/java/1.6.65"
 set -x JDK8 "$SDKMAN_CANDIDATES_DIR/java/8.0.232.hs-adpt"
 set -x JDK11 "$SDKMAN_CANDIDATES_DIR/java/11.0.5.hs-adpt"
 set -x JDK12 "$SDKMAN_CANDIDATES_DIR/java/12.0.2.hs-adpt"
