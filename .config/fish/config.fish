@@ -3,6 +3,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+alias cat=bat
+
 set -x LANG en_US.utf-8
 
 ## SDKs ##
