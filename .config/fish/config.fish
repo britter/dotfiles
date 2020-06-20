@@ -24,5 +24,7 @@ set -x SVN_EDITOR vim
 # gpg signing
 set -x GPG_TTY (tty)
 
+load_nvm
+
 # init prompt
 starship init fish | source
