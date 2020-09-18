@@ -6,6 +6,7 @@ export JDK11=$SDKMAN_CANDIDATES_DIR/java/11.0.8.hs-adpt
 export JDK12=$SDKMAN_CANDIDATES_DIR/java/12.0.2.hs-adpt
 export JDK13=$SDKMAN_CANDIDATES_DIR/java/13.0.2.hs-adpt
 export JDK14=$SDKMAN_CANDIDATES_DIR/java/14.0.2.hs-adpt
+export JDK15=$SDKMAN_CANDIDATES_DIR/java/15.0.0.hs-adpt
 export JAVA_HOME=$JDK11
 
 ## PATH ##
