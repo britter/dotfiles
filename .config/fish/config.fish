@@ -25,5 +25,7 @@ set -x SVN_EDITOR vim
 # gpg signing
 set -x GPG_TTY (tty)
 
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+
 # init prompt
 starship init fish | source
