@@ -30,6 +30,7 @@
   cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
   cleanup-deleted = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
   sync = "!f() { git checkout master && git fetch upstream && git merge upstream/master && git push origin master && git cleanup && git fetch -p;  }; f"
+  merge-back = "!f() { git fetch origin && git checkout release && git merge origin/release && git checkout master && git merge origin/master && git merge release && git cleanup-deleted;  }; f"
   co = checkout
   cm = checkout master
   st = status
