@@ -2,6 +2,6 @@ function gh_publish
   if test ! -d .git
     git this
   end
-  hub create (basename $PWD)
+  gh repo create
   git push -u origin master
 end

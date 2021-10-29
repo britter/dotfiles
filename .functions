@@ -52,7 +52,7 @@ EOF
 
 ## Push current git project to github
 githubinit() {
-  hub create $(basename $PWD)
+  gh repo create
   git push -u origin master
 }
 
