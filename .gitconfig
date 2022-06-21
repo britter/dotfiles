@@ -27,17 +27,17 @@
   branches = branch -a
   remotes = remote -v
   lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  cleanup = "!f() { git branch --merged master | grep -v master | xargs -n 1 git branch -D;  }; f"
+  cleanup = "!f() { git branch --merged main | grep -v main | xargs -n 1 git branch -D;  }; f"
   cleanup-deleted = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
-  sync = "!f() { git checkout master && git fetch upstream && git merge upstream/master && git push origin master && git cleanup && git fetch -p;  }; f"
-  merge-back = "!f() { git fetch origin && git checkout release && git merge origin/release && git checkout master && git merge origin/master && git merge release && git cleanup-deleted;  }; f"
+  sync = "!f() { git checkout main && git fetch upstream && git merge upstream/main && git push origin main && git cleanup && git fetch -p;  }; f"
+  merge-back = "!f() { git fetch origin && git checkout release && git merge origin/release && git checkout main && git merge origin/main && git merge release && git cleanup-deleted;  }; f"
   co = checkout
-  cm = checkout master
+  cm = checkout main
   st = status
   ci = commit
   cia = commit --amend
-  rbi = rebase -i master
-  rbm = rebase master
+  rbi = rebase -i main
+  rbm = rebase main
   rbc = rebase --continue
 [credential "https://git-wip-us.apache.org/"]
   helper = osxkeychain
@@ -46,3 +46,5 @@
   required = true
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
+[init]
+	defaultBranch = main
