@@ -1,0 +1,7 @@
+[user]
+  email = benedikt@gradlex.org
+  name = Benedikt Ritter
+  signingkey = 757DE51A2FD1489D
+
+[commit]
+  gpgsign = true
