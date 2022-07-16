@@ -9,10 +9,10 @@
 [includeif "gitdir:~/workspace/gradle/"]
   path = ~/.dotfiles/.gitconfig-work
 
-[includeif "gitdir:~/workspace/gradlex/"]
+[includeif "gitdir:~/github/gradlex-org/"]
   path = ~/.dotfiles/.gitconfig-gradlex
 
-[includeif "gitdir:~/workspace/apache/"]
+[includeif "gitdir:~/github/apache/"]
   path = ~/.dotfiles/.gitconfig-apache
 
 [core]
