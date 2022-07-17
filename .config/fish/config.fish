@@ -28,5 +28,8 @@ set -x SVN_EDITOR vim
 # gpg signing
 set -x GPG_TTY (tty)
 
+# asdf scripts need to be sourced after you have set your $PATH and after you have sourced your framework (oh-my-zsh etc).
+source /opt/asdf-vm/asdf.fish
+
 # init prompt
 starship init fish | source
