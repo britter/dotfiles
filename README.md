@@ -10,6 +10,14 @@ Pick what you like from the files, then modify the link script to link the files
 git clone git@github.com:britter/dotfiles.git ~/.dotfiles
 bash "~/.dotfiles/link"
 ```
+
+This will replace the dotfiles in the user home with the dotfiles stored in this repository.
+
+After linking the following software needs to be installed as well:
+
+- fisher - a plugin manager for fish shell
+- pathogen - a plugin manager for vim
+
 ## Inspiration
 
 My dotfiles are heavily inspired by [Ben Ripkens'](http://github.com/bripkens/dotfiles) dotfiles.
