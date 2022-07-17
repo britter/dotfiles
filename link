@@ -13,7 +13,7 @@ link() {
 }
 
 # Link necessary files
-for file in .{bash_profile,bashrc,gitconfig,vimrc,zshrc}; do
+for file in .{bash_profile,bashrc,gitconfig,tool-versions,vimrc,zshrc}; do
   link $file $file
 done
 
