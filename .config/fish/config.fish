@@ -23,7 +23,7 @@ switch (uname)
   case Linux
     source /opt/asdf-vm/asdf.fish
   case Darwin
-    echo -e "\nsource "(brew --prefix asdf)"/libexec/asdf.fish" >> ~/.config/fish/config.fish
+    source /usr/local/opt/asdf/libexec/asdf.fish
 end
 # on macOS additional configuration is required in .asdfrc, see https://github.com/halcyon/asdf-java#macos
 . ~/.asdf/plugins/java/set-java-home.fish
@@ -35,9 +35,3 @@ set -x JDK17 (asdf where java liberica-17.0.3.1+2)
 
 # init prompt
 starship init fish | source
-
-source /usr/local/opt/asdf/libexec/asdf.fish
-
-source /usr/local/opt/asdf/libexec/asdf.fish
-
-source /usr/local/opt/asdf/libexec/asdf.fish
