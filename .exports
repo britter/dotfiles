@@ -12,4 +12,4 @@ export JAVA_HOME=$JDK11
 ## PATH ##
 export PATH=/usr/local/bin:/usr/local/sbin:$JAVA_HOME/bin:~/bin:$HOME/.cargo/bin:$PATH
 
-export SVN_EDITOR=vim
+export EDITOR=vim

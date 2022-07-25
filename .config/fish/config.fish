@@ -13,7 +13,7 @@ set -x GOPATH ~/.gopath
 
 set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
 
-set -x SVN_EDITOR vim
+set -x EDITOR vim
 
 # gpg signing
 set -x GPG_TTY (tty)
