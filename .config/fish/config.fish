@@ -18,12 +18,18 @@ set -x EDITOR vim
 # gpg signing
 set -x GPG_TTY (tty)
 
+# init brew on macOs
+switch (uname)
+  case Darwin
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+end
+
 # asdf scripts need to be sourced after you have set your $PATH and after you have sourced your framework (oh-my-zsh etc).
 switch (uname)
   case Linux
     source /opt/asdf-vm/asdf.fish
   case Darwin
-    source /usr/local/opt/asdf/libexec/asdf.fish
+    source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
 # on macOS additional configuration is required in .asdfrc, see https://github.com/halcyon/asdf-java#macos
 . ~/.asdf/plugins/java/set-java-home.fish
