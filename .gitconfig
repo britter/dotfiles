@@ -1,19 +1,5 @@
-[user]
-  email = beneritter@gmail.com
-  name = Benedikt Ritter
-  signingkey = 394546A47BB40E12
-
-[commit]
-  gpgsign = true
-
-[includeif "gitdir:~/workspace/gradle/"]
-  path = ~/.dotfiles/.gitconfig-work
-
-[includeif "gitdir:~/github/gradlex-org/"]
-  path = ~/.dotfiles/.gitconfig-gradlex
-
-[includeif "gitdir:~/github/apache/"]
-  path = ~/.dotfiles/.gitconfig-apache
+[include]
+  path = ~/.dotfiles/.gitconfig-identity
 
 [core]
   excludesfile = ~/.dotfiles/.gitignore_global
