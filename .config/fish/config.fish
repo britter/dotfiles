@@ -11,7 +11,7 @@ set -x MAVEN_OPTS "-Duser.name=benedikt"
 
 set -x GOPATH ~/.gopath
 
-set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $HOME/.cargo/bin $HOME/.local/bin $PATH
+set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $HOME/.cargo/bin $HOME/.local/bin "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
 
 set -x EDITOR vim
 
