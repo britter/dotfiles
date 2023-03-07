@@ -34,11 +34,10 @@ end
 # on macOS additional configuration is required in .asdfrc, see https://github.com/halcyon/asdf-java#macos
 . ~/.asdf/plugins/java/set-java-home.fish
 
-set -x JDK8 (asdf where java liberica-8u333+2)
-set -x JDK11 (asdf where java liberica-11.0.15.1+2)
-set -x JDK16 (asdf where java liberica-16.0.2+7)
-set -x JDK17 (asdf where java liberica-17.0.3.1+2)
-set -x JDK18 (asdf where java liberica-18.0.2.1+1)
+set -x JDK8 (asdf where java liberica-8u362+9)
+set -x JDK11 (asdf where java liberica-11.0.18+10)
+set -x JDK17 (asdf where java liberica-17.0.6+10)
+set -x JDK18 (asdf where java liberica-8u362+9)
 
 # init prompt
 starship init fish | source
