@@ -34,6 +34,11 @@ end
 # on macOS additional configuration is required in .asdfrc, see https://github.com/halcyon/asdf-java#macos
 . ~/.asdf/plugins/java/set-java-home.fish
 
+# secrets not to be checked in
+if test -e /Users/bene/.dotfiles/.config/fish/secrets.fish
+  source /Users/bene/.dotfiles/.config/fish/secrets.fish
+end
+
 set -x JDK8 (asdf where java liberica-8u362+9)
 set -x JDK11 (asdf where java liberica-11.0.18+10)
 set -x JDK17 (asdf where java liberica-17.0.6+10)
