@@ -13,7 +13,7 @@ set -x MAVEN_OPTS "-Duser.name=benedikt"
 
 set PATH /usr/local/bin /usr/local/sbin $JAVA_HOME/bin $HOME/.local/bin "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
 
-set -x EDITOR vim
+set -x EDITOR hx
 
 # gpg signing
 set -x GPG_TTY (tty)
