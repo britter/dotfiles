@@ -26,8 +26,6 @@ end
 
 # asdf scripts need to be sourced after you have set your $PATH and after you have sourced your framework (oh-my-zsh etc).
 switch (uname)
-  case Linux
-    source /opt/asdf-vm/asdf.fish
   case Darwin
     source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
