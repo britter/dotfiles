@@ -41,6 +41,8 @@ set -x JDK8 (asdf where java liberica-8u362+9)
 set -x JDK11 (asdf where java liberica-11.0.18+10)
 set -x JDK17 (asdf where java liberica-17.0.6+10)
 set -x JDK18 (asdf where java liberica-18.0.2.1+1)
+set -x JDK20 (asdf where java liberica-20.0.2+10)
+
 
 # init prompt
 starship init fish | source
